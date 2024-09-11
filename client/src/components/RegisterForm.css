@@ -1,0 +1,26 @@
+.custom-border {
+  border-color: #121518 !important;
+  background-color: #eaecef !important;
+  border-radius: 20px !important;
+}
+
+.container-lg {
+  max-width: 450px !important;
+}
+
+.form-control {
+  font-size: 1rem !important;
+}
+
+.container-for-register-button {
+  max-width: 150px !important;
+}
+
+.register-button {
+  background-color: rgb(62, 225, 72) !important;
+  color: white !important;
+}
+
+.register-button:hover {
+  background-color: rgb(45, 138, 51) !important;
+}

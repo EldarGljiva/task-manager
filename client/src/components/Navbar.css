@@ -1,0 +1,17 @@
+.dropdown-menu .dropdown-item {
+  text-decoration: none;
+}
+
+.dropdown-menu .dropdown-item:hover,
+.dropdown-menu .dropdown-item:focus {
+  background-color: #dfe7f2 !important;
+  color: rgb(38, 38, 39);
+}
+
+.dropdown-toggle {
+  background-color: transparent !important;
+}
+
+.navbar-custom {
+  background-color: rgb(59, 157, 242);
+}

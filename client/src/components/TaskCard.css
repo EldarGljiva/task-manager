@@ -1,0 +1,61 @@
+.task-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  transition: transform 0.2s;
+  max-width: 300px;
+}
+
+.task-card:hover {
+  transform: scale(1.05);
+}
+
+.task-title {
+  font-size: 1.25rem;
+  margin-bottom: 8px;
+  white-space: nowrap; /* Prevents the title from wrapping, stays on single line */
+  overflow: hidden; /* Hides the overflow text */
+  text-overflow: ellipsis; /* Adds ellipsis for overflowed text */
+}
+
+.task-description {
+  font-size: 1rem;
+  color: #666;
+  white-space: nowrap; /* Prevents the description from wrapping, stays on single line */
+  overflow: hidden; /* Hides the overflow text */
+  text-overflow: ellipsis; /* Adds ellipsis for overflowed text */
+  max-width: 100%; /* Ensures the description doesn't exceed the card width */
+}
+
+.task-actions {
+  display: flex; /* Use flexbox to align buttons in a row */
+  gap: 8px; /* Add space between buttons */
+  margin-top: 12px;
+}
+
+.btn {
+  flex: 1; /* Allow buttons to grow and shrink as needed */
+  margin: 0; /* Remove default margins */
+  padding: 8px 16px; /* Add padding to buttons */
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  color: white;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  border-color: #dc3545;
+  color: white;
+}
+
+.btn-success {
+  background-color: #28a745;
+  border-color: #28a745;
+  color: white;
+}
