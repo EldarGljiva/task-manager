@@ -31,10 +31,16 @@
 
 ### .env file should have the following structure:
 
-DB_USER= [ your data ]
-DB_HOST= [ your data ]
-DB_NAME= task_management
-DB_PASSWORD= [ your data ]
-DB_PORT= 5432
-PORT= 3001
-SECRET_KEY= [ your data ]
+DB_USER=[ your data ]
+
+DB_HOST=[ your data ]
+
+DB_NAME=task_management
+
+DB_PASSWORD=[ your data ]
+
+DB_PORT=5432
+
+PORT=3001
+
+SECRET_KEY=[ your data ]
