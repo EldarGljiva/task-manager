@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import "./LoginForm.css";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import axios from "axios";
+import "./LoginForm.css";
 
 const LoginForm = () => {
   // State for email and password inputs
@@ -30,7 +30,6 @@ const LoginForm = () => {
       navigate("/home");
       toast.success("Login successful!");
     } catch (err) {
-      console.error("Login Error:", err);
       toast.error("Invalid email or password. Please try again.");
     }
   };
@@ -38,13 +37,17 @@ const LoginForm = () => {
   return (
     <div
       className="d-flex justify-content-center align-items-center custom-container"
-      style={{ marginTop: 115 }}
+      style={{ marginTop: 70 }}
     >
       <div className="border shadow-lg p-5 custom-border container-lg">
-        <h2 className="mb-5">Login</h2>
+        <h2 className="mb-5" style={{ color: "#333333" }}>
+          Login
+        </h2>
         <form onSubmit={handleSubmit} className="login-form">
           <div className="form-group mb-3">
-            <label htmlFor="email">Email:</label>
+            <label htmlFor="email" style={{ color: "#555555 " }}>
+              Email:
+            </label>
             <input
               type="email"
               id="email"
@@ -55,7 +58,9 @@ const LoginForm = () => {
             />
           </div>
           <div className="form-group mb-3">
-            <label htmlFor="password">Password:</label>
+            <label htmlFor="password" style={{ color: "#555555 " }}>
+              Password:
+            </label>
             <input
               type="password"
               id="password"
@@ -66,14 +71,17 @@ const LoginForm = () => {
             />
           </div>
           <div className="container-for-login-button">
-            <button type="submit" className="btn login-button w-100">
+            <button type="submit" className="btn custom-login-button w-100">
               Login
             </button>
           </div>
         </form>
         <div className="text-flex-start mt-3">
-          <p>
-            Don't have an account? <Link to="/register">Register</Link>
+          <p style={{ color: "#555555 " }}>
+            Don't have an account?
+            <Link to="/register">
+              <span style={{ color: "#2196F3" }}>Register</span>
+            </Link>
           </p>
         </div>
       </div>

@@ -15,14 +15,14 @@ const Navbar = () => {
   const isLoggedIn = !!localStorage.getItem("token");
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-light navbar-custom sticky-top">
+    <nav className="navbar navbar-expand-lg navbar-light">
       <div className="container-fluid">
-        <a className="navbar-brand text-light fs-4" href="/home">
+        <a className="navbar-brand fs-4 custom-primary-text" href="/home">
           Task Manager
         </a>
         <div className="dropdown show">
           <a
-            className="dropdown-toggle dropdown-item text-white"
+            className="dropdown-toggle dropdown-item custom-primary-text"
             href="/"
             role="button"
             id="dropdownMenuLink"

@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { jwtDecode } from "jwt-decode";
 import axios from "axios";
+import "./AddTaskForm.css";
 
 const AddTaskForm = () => {
   // Initialize state for task title and description
@@ -66,14 +67,18 @@ const AddTaskForm = () => {
   return (
     <div
       className="d-flex justify-content-center align-items-center custom-container"
-      style={{ marginTop: 90 }}
+      style={{ marginTop: 50 }}
     >
       <div className="border shadow-lg p-5 custom-border container-lg">
-        <h2>Add a New Task</h2>
-        <p>Please fill out the details below to add a new task.</p>
-        <form onSubmit={handleSubmit} className="login-form">
+        <h2 style={{ color: "#333333" }}>Add a New Task</h2>
+        <p style={{ color: "#555555" }}>
+          Please fill out the details below to add a new task.
+        </p>
+        <form onSubmit={handleSubmit} className="add-form">
           <div className="form-group mb-3">
-            <label htmlFor="title">Title:</label>
+            <label htmlFor="title" style={{ color: "#555555" }}>
+              Title:
+            </label>
             <input
               type="text"
               id="title"
@@ -84,7 +89,9 @@ const AddTaskForm = () => {
             />
           </div>
           <div className="form-group mb-3">
-            <label htmlFor="description">Description:</label>
+            <label htmlFor="description" style={{ color: "#555555" }}>
+              Description:
+            </label>
             <textarea
               id="description"
               value={description}
@@ -94,8 +101,8 @@ const AddTaskForm = () => {
               required
             />
           </div>
-          <div className="container-for-login-button">
-            <button type="submit" className="btn login-button w-100">
+          <div className="container-for-add-button d-flex justify-content-center align-items-center">
+            <button type="submit" className="btn custom-add-button w-100">
               Add
             </button>
           </div>

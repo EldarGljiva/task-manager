@@ -1,0 +1,18 @@
+.add-form .custom-add-button {
+  border: none;
+  color: "#333333 ";
+  padding: 10px 20px;
+  border: 2px solid #ffffff;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: rgba(233, 239, 249, 0.04);
+  max-width: 150px;
+}
+
+.add-form .custom-add-button:hover {
+  color: "#333333";
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: 2px solid #ffffff;
+  transition: all 0.3s ease;
+}

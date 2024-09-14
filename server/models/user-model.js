@@ -1,8 +1,11 @@
 import db from "../config/database.js";
 
 // Get all users
-export const getAllUsers = async () => {
-  const result = await db.query("SELECT * FROM users");
+export const getAllUsers = async (limit = 10, offset = 0) => {
+  const result = await db.query("SELECT * FROM users LIMIT $1 OFFSET $2", [
+    limit,
+    offset,
+  ]);
   return result.rows;
 };
 

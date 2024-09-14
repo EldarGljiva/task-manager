@@ -31,7 +31,6 @@ const RegisterForm = () => {
       toast.success("Registration successful!");
       navigate("/home");
     } catch (err) {
-      console.error("Registration Error:", err);
       toast.error(
         err.response?.data.message || "Registration failed. Please try again."
       );
@@ -41,13 +40,17 @@ const RegisterForm = () => {
   return (
     <div
       className="d-flex justify-content-center align-items-center custom-container"
-      style={{ marginTop: 75 }}
+      style={{ marginTop: 35 }}
     >
       <div className="border shadow-lg p-5 custom-border container-lg">
-        <h2 className="mb-5">Register</h2>
+        <h2 className="mb-5" style={{ color: "#333333" }}>
+          Register
+        </h2>
         <form onSubmit={handleSubmit} className="register-form">
           <div className="form-group mb-3">
-            <label htmlFor="name">Name:</label>
+            <label htmlFor="name" style={{ color: "#555555 " }}>
+              Name:
+            </label>
             <input
               type="text"
               id="name"
@@ -58,7 +61,9 @@ const RegisterForm = () => {
             />
           </div>
           <div className="form-group mb-3">
-            <label htmlFor="email">Email:</label>
+            <label htmlFor="email" style={{ color: "#555555 " }}>
+              Email:
+            </label>
             <input
               type="email"
               id="email"
@@ -69,7 +74,9 @@ const RegisterForm = () => {
             />
           </div>
           <div className="form-group mb-3">
-            <label htmlFor="password">Password:</label>
+            <label htmlFor="password" style={{ color: "#555555 " }}>
+              Password:
+            </label>
             <input
               type="password"
               id="password"
@@ -80,14 +87,17 @@ const RegisterForm = () => {
             />
           </div>
           <div className="container-for-register-button">
-            <button type="submit" className="btn register-button w-100">
+            <button type="submit" className="btn custom-register-button w-100">
               Register
             </button>
           </div>
         </form>
         <div className="text-flex-start mt-3">
-          <p>
-            Already have an account? <Link to="/login">Login</Link>
+          <p style={{ color: "#555555 " }}>
+            Already have an account?
+            <Link to="/login">
+              <span style={{ color: "#2196F3" }}>Login</span>
+            </Link>
           </p>
         </div>
       </div>

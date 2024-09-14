@@ -1,3 +1,21 @@
-.custom-width {
-  max-width: 200px !important;
+.custom-button {
+  border: none;
+  color: #333333;
+  padding: 10px 20px;
+  border: 2px solid #ffffff;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: rgba(233, 239, 249, 0.04);
+  min-width: 150px;
+  text-decoration: none;
+  text-align: center;
+  font-size: large;
+}
+
+.custom-button:hover {
+  color: #333333 !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
+  border: 2px solid #ffffff !important;
+  transition: all 0.3s ease !important;
 }

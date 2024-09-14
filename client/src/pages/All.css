@@ -1,0 +1,8 @@
+.custom-background {
+  background: rgb(179, 229, 252);
+  background: linear-gradient(
+    0deg,
+    rgba(179, 229, 252, 1) 0%,
+    rgba(129, 212, 250, 1) 100%
+  );
+}

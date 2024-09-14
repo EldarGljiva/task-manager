@@ -1,10 +1,11 @@
 import db from "../config/database.js";
 
 // Get a task by user id
-export const getTasksByUserId = async (userId) => {
-  const result = await db.query("SELECT * FROM tasks WHERE user_id = $1", [
-    userId,
-  ]);
+export const getTasksByUserId = async (userId, limit = 10, offset = 0) => {
+  const result = await db.query(
+    "SELECT * FROM tasks WHERE user_id = $1 LIMIT $2 OFFSET $3",
+    [userId, limit, offset]
+  );
   return result.rows;
 };
 

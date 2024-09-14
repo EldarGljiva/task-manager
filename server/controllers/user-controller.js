@@ -8,11 +8,16 @@ import {
 } from "../models/user-model.js";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
+import pkg from "validator";
+const { isEmail } = pkg;
 
 // Controller function to get all users
 export const getUsers = async (req, res) => {
   try {
     const users = await getAllUsers(); // Get all users
+    if (!users.length) {
+      res.status(404).json({ message: "No users found" });
+    }
     res.status(200).json(users);
   } catch (error) {
     res.status(500).json({ message: "Error getting users", error });
@@ -37,7 +42,26 @@ export const getUser = async (req, res) => {
 // Controller function to register a new user
 export const registerUser = async (req, res) => {
   const { name, email, password } = req.body; // Get user info from request
+  if (!name || !email || !password) {
+    return res.status(400).json({ message: "Missing required fields" });
+  }
+  // Check password length
+  if (password.length < 5) {
+    return res
+      .status(400)
+      .json({ message: "Password must be at least 5 characters long" });
+  }
+  // Check if email is valid
+  if (!isEmail(email)) {
+    return res.status(400).json({ message: "Invalid email format" });
+  }
   try {
+    // Check if user already exists
+    const existingUser = await getUserByEmail(email);
+    if (existingUser) {
+      return res.status(409).json({ message: "User already exists" }); // Conflict if user exists
+    }
+
     const hashedPassword = await bcrypt.hash(password, 10); // Hash the password
     const newUser = await addNewUser(name, email, hashedPassword); // Add new user to database
 
@@ -62,7 +86,9 @@ export const registerUser = async (req, res) => {
 export const updateUser = async (req, res) => {
   const userId = req.params.id; // Get user ID from request
   const { name, email, password } = req.body; // Get updated info from request
-
+  if (!name && !email && !password) {
+    return res.status(400).json({ message: "No update fields provided" });
+  }
   try {
     const hashedPassword = await bcrypt.hash(password, 10); // Hash the new password
     const updatedUser = await updateExistingUser(
@@ -102,7 +128,9 @@ export const deleteUser = async (req, res) => {
 // Controller function to log in a user
 export const loginUser = async (req, res) => {
   const { email, password } = req.body; // Get email and password from request
-
+  if (!email || !password) {
+    return res.status(400).json({ message: "Email and password are required" });
+  }
   try {
     const user = await getUserByEmail(email); // Find user in DB by email
 

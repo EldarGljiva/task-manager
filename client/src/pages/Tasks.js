@@ -127,7 +127,10 @@ const Tasks = () => {
 
   return (
     <div className="tasks-container">
-      <h2 className="d-flex justify-content-center align-items-center m-3">
+      <h2
+        className="d-flex justify-content-center align-items-center m-3"
+        style={{ color: "#333333" }}
+      >
         My Tasks
       </h2>
       <FloatingButton onClick={() => navigate("/add-task")} />

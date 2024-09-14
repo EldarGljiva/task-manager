@@ -20,7 +20,9 @@ const Message = () => {
 
   return (
     <div className="d-flex justify-content-center align-items-center mt-5">
-      <h3 style={{ marginTop: "100px" }}>Welcome {userName}</h3>
+      <h3 style={{ marginTop: "100px", color: "#555555" }}>
+        Welcome <span style={{ color: "#9C27B0" }}>{userName}</span>
+      </h3>
     </div>
   );
 };

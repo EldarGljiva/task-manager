@@ -1,6 +1,6 @@
 # Task Manager
 
-⚠️ Before using: Make sure you restore the provided `.sql` file into your PostgreSQL database.
+⚠️ Before using: Make sure you read the full file and restore the provided `.sql` file into your PostgreSQL database.
 
 ## How to Use
 
@@ -28,3 +28,13 @@
 - **Backend**: JavaScript, NodeJS, ExpressJS
 - **Frontend**: HTML, CSS, Bootstrap, ReactJS
 - **Database**: PostgreSQL
+
+### .env file should have the following structure:
+
+DB_USER= [ your data ]
+DB_HOST= [ your data ]
+DB_NAME= task_management
+DB_PASSWORD= [ your data ]
+DB_PORT= 5432
+PORT= 3001
+SECRET_KEY= [ your data ]
