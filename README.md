@@ -29,7 +29,7 @@
 - **Frontend**: HTML, CSS, Bootstrap, ReactJS
 - **Database**: PostgreSQL
 
-### .env file should have the following structure:
+### ⚠️ .env file should have the following structure:
 
 DB_USER=[ your data ]
 
