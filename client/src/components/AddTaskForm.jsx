@@ -85,6 +85,7 @@ const AddTaskForm = () => {
               value={title}
               onChange={(e) => setTitle(e.target.value)}
               className="form-control w-100"
+              autoComplete="off"
               required
             />
           </div>
@@ -98,6 +99,7 @@ const AddTaskForm = () => {
               onChange={(e) => setDescription(e.target.value)}
               className="form-control w-100 border input-border"
               rows="4"
+              autoComplete="off"
               required
             />
           </div>

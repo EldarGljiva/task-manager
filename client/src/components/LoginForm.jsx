@@ -54,6 +54,7 @@ const LoginForm = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)} // Update email state on change
               className="form-control w-100"
+              autoComplete="off"
               required
             />
           </div>
@@ -67,6 +68,7 @@ const LoginForm = () => {
               value={password}
               onChange={(e) => setPassword(e.target.value)} // Update password state on change
               className="form-control w-100 border input-border"
+              autoComplete="off"
               required
             />
           </div>

@@ -57,6 +57,7 @@ const RegisterForm = () => {
               value={name}
               onChange={(e) => setName(e.target.value)}
               className="form-control w-100"
+              autoComplete="off"
               required
             />
           </div>
@@ -70,6 +71,7 @@ const RegisterForm = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               className="form-control w-100 border input-border"
+              autoComplete="off"
               required
             />
           </div>
@@ -83,6 +85,7 @@ const RegisterForm = () => {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               className="form-control w-100 border input-border"
+              autoComplete="off"
               required
             />
           </div>
